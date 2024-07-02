@@ -1,0 +1,53 @@
+<!-- #1 -->
+<!-- <form [formGroup]="skillsForm" (ngSubmit)="onSubmit()">
+ 
+    <p>
+      <label for="name">Name </label>
+      <input type="text" id="name" name="name" formControlName="name">
+    </p>
+   
+   
+  Subject:
+    <div formArrayName="skills">
+      <div *ngFor="let skill of skills.controls; let i=index">
+        <div [formGroupName]="i">
+          {{i}}
+          subject name :
+          <input type="text" formControlName="skill">
+          markes:
+          <input type="text" formControlName="exp">
+   
+          <button (click)="removeSkill(i)">Remove</button>
+        </div>
+      </div>
+    </div>
+   
+    <p>
+      <button type="submit">Submit</button>
+    </p>
+   
+  </form>
+   
+   
+  <p>
+    <button type="button" (click)="addSkills()">Add</button>
+  </p> -->
+
+  <!-- #2 -->
+  <p>  
+    It's a form:
+  </p>  
+  <div [formGroup]="orderForm">  
+  <div formArrayName="items"  
+    *ngFor="let item of items.controls; let i = index;">  
+    <div [formGroupName]="i">  
+      <input formControlName="name" placeholder="Item name">  
+      <input formControlName="description" placeholder="Item description">  
+      <input formControlName="price" placeholder="Item price">  
+
+      <button (click)="removeItem(i)">Remove</button>
+
+    </div>  
+  </div>  
+  </div>  
+  <button (click)="addItem()">Add</button>   

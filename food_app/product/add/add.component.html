@@ -1,0 +1,23 @@
+<form [formGroup]="loginform">
+    <h2>====Food list====</h2> 
+    <label for="id">id:</label><br>
+    <input type="number" id="id" name="id" formControlName="id">
+    <br>
+    <label for="name">Food item name:</label><br>
+    <input type="text" id="food_name" name="food_name" formControlName="food_name">
+    <br>
+    <samp *ngIf="food_name && food_name.invalid && food_name.touched">input valid data</samp>
+    <br>
+    <label for="quantity">Quantity:</label><br>
+    <input type="number" id="quantity" name="quantity" formControlName="quantity">
+    <br>
+    <samp *ngIf="quantity && quantity.invalid && quantity.touched">input valid data</samp>
+    <br>
+    <label for="price">price:</label><br>
+    <input type="number" id="price" name="price" formControlName="price">
+    <br>
+    <samp *ngIf="price && price.invalid && price.touched">input valid data</samp>
+    <br>
+    <button type="click" (click)="route()">Submit</button>
+    
+    </form>

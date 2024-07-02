@@ -1,0 +1,24 @@
+<table>
+    <thead>
+      <tr>
+        <th>item id</th>
+        <th>item name</th>
+        <th>Quantity</th>
+        <th>price</th>
+        <th>update</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of food">
+        <th>{{item.id}}</th>
+        <th>{{item.food_name}}</th>
+        <td>{{item.quantity}}</td>
+        <td>{{item.price}}</td>
+        <td><input type="button" name="button" id="button" value="edit" (click)="route('/edit',item.id)"></td>
+      </tr>
+    </tbody>
+    <button type="click" >Add</button>
+
+  </table>
+ 
+  

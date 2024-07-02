@@ -1,0 +1,25 @@
+
+
+
+<form [formGroup]="loginform">
+  <label for="name">name:</label><br>
+  <input type="text" id="name" name="name" formControlName="user">
+  <br>
+  <samp *ngIf="user && user.invalid && user.touched">input valid data</samp>
+  <br>
+  <label for="email">email:</label><br>
+  <input type="text" id="email" name="email" formControlName="email">
+  <br>
+  <samp *ngIf="email && email.invalid && email.touched">input valid data</samp>
+  <br>
+  <label for="number">Number:</label><br>
+  <input type="number" id="number" name="number" formControlName="number">
+  <br>
+  <samp *ngIf="number && number.invalid && number.touched">input valid data</samp>
+  <br>
+  <button (click)="route()">Submit</button>
+  <!-- <input type="submit" value="Submit"> -->
+</form> 
+<!-- <h1>Hello</h1> -->
+
+
